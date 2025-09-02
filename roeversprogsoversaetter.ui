@@ -37,7 +37,7 @@
     <item row="2" column="0" colspan="4">
      <widget class="QPushButton" name="oversaet_knap">
       <property name="text">
-       <string>PushButton</string>
+       <string>Translate</string>
       </property>
      </widget>
     </item>
