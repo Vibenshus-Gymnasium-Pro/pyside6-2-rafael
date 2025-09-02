@@ -14,6 +14,18 @@ def oversaet_til_roeversprog(inputtekst):
     return outputtekst
 
 
-def oversaet_fra_roeversprog_til_andet_sprog(inputtekst):
-    outputtekst = "Her skal røversproget fjernes og almindeligt sprog skal returneres.\nGiv gerne fejlmeddelelser, hvis røversproget ikke er korrekt."
+def oversaet_fra_roeversprog(inputtekst):
+    """ This function translates into normal language. """
+    outputtekst = ""
+    skip = 0
+
+    for i in inputtekst:
+        if skip > 0:
+            skip -= 1
+        else:
+            if i.lower() in consonants:
+                outputtekst += i
+                skip = 2
+            else:
+                outputtekst += i
     return outputtekst
